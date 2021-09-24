@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7f5d7044-5997-4229-a58b-7143790e2c33" name="Changes" comment="commit">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/groovy_4_0_0_alpha_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hackerrank.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-4.0.0-alpha-3-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-4.0.0-alpha-3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-ant-4.0.0-alpha-3-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-ant-4.0.0-alpha-3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-astbuilder-4.0.0-alpha-3-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-astbuilder-4.0.0-alpha-3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-cli-commons-4.0.0-alpha-3-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-cli-commons-4.0.0-alpha-3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-cli-picocli-4.0.0-alpha-3-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-cli-picocli-4.0.0-alpha-3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-console-4.0.0-alpha-3-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-console-4.0.0-alpha-3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-contracts-4.0.0-alpha-3-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-contracts-4.0.0-alpha-3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-datetime-4.0.0-alpha-3-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-datetime-4.0.0-alpha-3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-dateutil-4.0.0-alpha-3-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-dateutil-4.0.0-alpha-3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-docgenerator-4.0.0-alpha-3-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-docgenerator-4.0.0-alpha-3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-ginq-4.0.0-alpha-3-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-ginq-4.0.0-alpha-3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-groovydoc-4.0.0-alpha-3-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-groovydoc-4.0.0-alpha-3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-groovysh-4.0.0-alpha-3-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-groovysh-4.0.0-alpha-3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-jmx-4.0.0-alpha-3-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-jmx-4.0.0-alpha-3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-json-4.0.0-alpha-3-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-json-4.0.0-alpha-3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-jsr223-4.0.0-alpha-3-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-jsr223-4.0.0-alpha-3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-macro-4.0.0-alpha-3-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-macro-4.0.0-alpha-3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-macro-library-4.0.0-alpha-3-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-macro-library-4.0.0-alpha-3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-nio-4.0.0-alpha-3-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-nio-4.0.0-alpha-3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-servlet-4.0.0-alpha-3-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-servlet-4.0.0-alpha-3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-sql-4.0.0-alpha-3-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-sql-4.0.0-alpha-3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-swing-4.0.0-alpha-3-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-swing-4.0.0-alpha-3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-templates-4.0.0-alpha-3-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-templates-4.0.0-alpha-3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-test-4.0.0-alpha-3-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-test-4.0.0-alpha-3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-test-junit5-4.0.0-alpha-3-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-test-junit5-4.0.0-alpha-3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-testng-4.0.0-alpha-3-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-testng-4.0.0-alpha-3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-typecheckers-4.0.0-alpha-3-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-typecheckers-4.0.0-alpha-3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-xml-4.0.0-alpha-3-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-xml-4.0.0-alpha-3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-yaml-4.0.0-alpha-3-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/groovy-yaml-4.0.0-alpha-3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Hackerrank/NumberLineJumps/Result.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Hackerrank/NumberLineJumps/Solution.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NumberLineJumps/Solution.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1yZVenqPns6ehigRIL7V0jJnasB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Hackerrank" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7f5d7044-5997-4229-a58b-7143790e2c33" name="Changes" comment="" />
+      <created>1632459194880</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1632459194880</updated>
+    </task>
+    <task id="LOCAL-00001" summary="commit">
+      <created>1632459211375</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1632459211375</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+  </component>
+</project>
