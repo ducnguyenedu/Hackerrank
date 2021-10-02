@@ -29,12 +29,12 @@ class Result {
     public static String kangaroo(int x1, int v1, int x2, int v2) {
         // Write your code here
 
-        if(x1==x2) return "YES";
-        boolean canCatchUp = x1<x2? (v1 > v2):(v2 > v1);
-        if(canCatchUp) {
+        if (x1 == x2) return "YES";
+        boolean canCatchUp = x1 < x2 ? (v1 > v2) : (v2 > v1);
+        if (canCatchUp) {
             boolean willCatchUpOnLand = (x1 - x2) % (v2 - v1) == 0;
-            if(willCatchUpOnLand) {
-               return  "YES";
+            if (willCatchUpOnLand) {
+                return "YES";
             }
         }
         return "NO";
@@ -57,6 +57,9 @@ public class Solution {
         String result = Result.kangaroo(x1, v1, x2, v2);
 
         System.out.println(result);
+
     }
+
+
 }
 
