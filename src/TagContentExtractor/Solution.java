@@ -1,17 +1,15 @@
 package TagContentExtractor;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-public class Solution{
-    public static void main(String[] args){
+public class Solution {
+    public static void main(String[] args) {
 
         Scanner in = new Scanner(System.in);
         int testCases = Integer.parseInt(in.nextLine());
-        while(testCases>0){
+        while (testCases > 0) {
             String line = in.nextLine();
 
             //Write your code here
@@ -23,7 +21,7 @@ public class Solution{
                 System.out.println(m.group(2));
                 matchFound = true;
             }
-            if ( ! matchFound) {
+            if (!matchFound) {
                 System.out.println("None");
             }
             testCases--;
