@@ -1,17 +1,10 @@
 package the_birthday_bar;
 
 import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
-import java.util.*;
-import java.util.concurrent.*;
-import java.util.function.*;
-import java.util.regex.*;
-import java.util.stream.*;
-import static java.util.stream.Collectors.joining;
-import static java.util.stream.Collectors.toList;
+import java.util.List;
+import java.util.stream.Stream;
 
+import static java.util.stream.Collectors.toList;
 
 
 public class Solution {
@@ -40,6 +33,7 @@ public class Solution {
         bufferedWriter.close();
     }
 }
+
 class Result {
 
     /*
@@ -54,16 +48,16 @@ class Result {
 
     public static int birthday(List<Integer> s, int d, int m) {
         // Write your code here
-        int sum = 0,ways=0;
-        for (int i=0;i<m;i++){
+        int sum = 0, ways = 0;
+        for (int i = 0; i < m; i++) {
             sum += s.get(i);
         }
-        for (int i=0;i<s.size()-m+1;i++) {
-            if (sum==d) {
+        for (int i = 0; i < s.size() - m + 1; i++) {
+            if (sum == d) {
                 ways++;
             }
-            if (i+m <s.size()){
-                sum =sum-s.get(i)+s.get(i+m);
+            if (i + m < s.size()) {
+                sum = sum - s.get(i) + s.get(i + m);
             }
         }
         return ways;
