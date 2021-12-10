@@ -13,10 +13,10 @@ public class test {
         int max = Integer.MIN_VALUE;
 
         for (int i = 0; i < n; i++) {
-            int input = in.nextInt();
+            int num = in.nextInt();
 
-            deque.add(input);
-            set.add(input);
+            deque.add(num);
+            set.add(num);
 
             if (deque.size() == m) {
                 if (set.size() > max) max = set.size();
