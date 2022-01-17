@@ -1,6 +1,9 @@
 package java_dequeue;
 
-import java.util.*;
+import java.util.ArrayDeque;
+import java.util.Deque;
+import java.util.HashSet;
+import java.util.Scanner;
 
 public class test {
     public static void main(String[] args) {
