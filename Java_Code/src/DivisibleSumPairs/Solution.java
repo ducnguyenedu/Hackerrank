@@ -27,10 +27,10 @@ class Result {
          int ar[n]: an array of integers
          int k: the integer divisor
          * */
-        int count=0;
-        for(int j =0; j< n;j++){
-            for(int i=0; i<j;i++){
-                if((ar.get(i)+ar.get(j))%k==0){
+        int count = 0;
+        for (int j = 0; j < n; j++) {
+            for (int i = 0; i < j; i++) {
+                if ((ar.get(i) + ar.get(j)) % k == 0) {
                     count++;
                 }
             }
