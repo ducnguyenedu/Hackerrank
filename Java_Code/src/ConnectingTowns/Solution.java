@@ -20,7 +20,12 @@ class Result {
 
     public static int connectingTowns(int n, List<Integer> routes) {
         // Write your code here
-        return 0;
+        int routeCount = 1;
+        for (int i = 0; i < routes.size(); i++) {
+            routeCount *= routes.get(i);
+            routeCount %= 1234567;
+        }
+        return routeCount;
     }
 
 }
