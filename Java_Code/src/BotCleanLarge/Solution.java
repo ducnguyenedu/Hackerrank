@@ -1,66 +1,45 @@
 package BotCleanLarge;
 
 import java.util.Scanner;
-// Score 51.90 the best is 56.40
+//Score 52.8
 public class Solution {
+    static int[] findAround (int botX, int botY, int radius,int H, int W, String[] board){
+        if (board[botY].charAt(botX) == 'd') {
+            int[] res = new int[2];
+            res[0]=botX;
+            res[1]=botY;
+            return res;
+        }
+        int startX= Math.max(botX - radius, 0);
+        int startY= Math.max(botY - radius, 0);
+        int endX= Math.min(botX + radius, W);
+        int endY = Math.min(botY + radius, H);
+
+        for (int y= startY; y < endY; y++) {
+            for (int x = startX; x < endX; x++) {
+                if (board[y].charAt(x) == 'd') {
+                    int[] res = new int[2];
+                    res[0]=x;
+                    res[1]=y;
+                    return res;
+                }
+            }
+        }
+
+        return findAround(botX,  botY,  radius+1, H,  W,  board);
+    }
     static void play(int botY, int botX, int H, int W, String[] board) {
         //add logic here
         int dirtX = 0;
         int dirtY = 0;
-        boolean isHave= false;
-        //update check next to dirt
-        if (board[botY].charAt(botX) == 'd') {
-            dirtX = botX;
-            dirtY = botY;
-            isHave= true;
-        }
-        else if (botX>0 && board[botY].charAt(botX-1) == 'd') {
-            dirtX = botX-1;
-            dirtY = botY;
-            isHave= true;
-        }
-        else if(botX+1<W && board[botY].charAt(botX+1) == 'd') {
-            dirtX = botX+1;
-            dirtY = botY;
-            isHave= true;
-        }
-        else if(botY>0 && board[botY-1].charAt(botX) == 'd') {
-            dirtX = botX;
-            dirtY = botY-1;
-            isHave= true;
-        }
-        else if (botY+1<H && board[botY+1].charAt(botX) == 'd') {
-            dirtX = botX;
-            dirtY = botY+1;
-            isHave= true;
-        }
 
-        //update check nearly dirt
-        if(!isHave){
-            for (int y = (botY==0?botY:botY-1);y<(botY+2>H?H:botY+2) ; y++) {
-                for (int x = (botX==0?botX:botX-1); x < (botX+2>W?W:botX+2); x++) {
+        int[] dirt= null;
+        int radius=0;
+        dirt = findAround(botX,  botY,  radius, H,  W,  board);
 
+        dirtX= dirt[0];
+        dirtY= dirt[1];
 
-                    if (board[y].charAt(x) == 'd') {
-                        dirtX = x;
-                        dirtY = y;
-                        isHave= true;
-                    }
-                }
-            }}
-        //find dirt normal way
-        if(!isHave){
-            for (int y = 0; y < H; y++) {
-                for (int x = 0; x < W; x++) {
-
-
-                    if (board[y].charAt(x) == 'd') {
-                        dirtX = x;
-                        dirtY = y;
-                    }
-                }
-            }
-        }
 
 
         if ((dirtX == botX) && (dirtY == botY)) {
