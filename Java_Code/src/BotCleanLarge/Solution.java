@@ -1,7 +1,7 @@
 package BotCleanLarge;
 
 import java.util.Scanner;
-
+// Score 51.90 the best is 56.40
 public class Solution {
     static void play(int botY, int botX, int H, int W, String[] board) {
         //add logic here
