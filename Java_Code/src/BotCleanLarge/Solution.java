@@ -3,8 +3,10 @@ package BotCleanLarge;
 import java.util.Scanner;
 //Score 52.8
 public class Solution {
+
     static int[] findAround (int botX, int botY, int radius,int H, int W, String[] board){
-        if (board[botY].charAt(botX) == 'd') {
+
+        if (radius==1&&board[botY].charAt(botX) == 'd') {
             int[] res = new int[2];
             res[0]=botX;
             res[1]=botY;
@@ -17,7 +19,9 @@ public class Solution {
 
         for (int y= startY; y < endY; y++) {
             for (int x = startX; x < endX; x++) {
+
                 if (board[y].charAt(x) == 'd') {
+
                     int[] res = new int[2];
                     res[0]=x;
                     res[1]=y;
