@@ -1,79 +1,152 @@
 package BotCleanLarge;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
-//Score 52.8
+
 public class Solution {
 
-    static int[] findAround (int botX, int botY, int radius,int H, int W, String[] board){
+    public static void main(String[] args) {
 
-        if (radius==1&&board[botY].charAt(botX) == 'd') {
-            int[] res = new int[2];
-            res[0]=botX;
-            res[1]=botY;
-            return res;
-        }
-        int startX= Math.max(botX - radius, 0);
-        int startY= Math.max(botY - radius, 0);
-        int endX= Math.min(botX + radius, W);
-        int endY = Math.min(botY + radius, H);
+        Scanner in = new Scanner(System.in);
+        int botY = in.nextInt();
+        int botX = in.nextInt();
+        int W = in.nextInt();
+        int H = in.nextInt();
+        char board[][] = new char[H][W];
+        for (int i = 0; i < H; i++)
+            board[i] = in.next().toCharArray();
+        in.close();
+        System.out.println(new Solution().play(botY, botX, H, W, board));
+    }
 
-        for (int y= startY; y < endY; y++) {
-            for (int x = startX; x < endX; x++) {
-
-                if (board[y].charAt(x) == 'd') {
-
-                    int[] res = new int[2];
-                    res[0]=x;
-                    res[1]=y;
-                    return res;
+    public ArrayList<Integer> search(ArrayList<Integer> path, int[][] results) {
+        int loop = 0;
+        boolean improvement = true;
+        int n = path.size();
+        int actualPathResult, newPathResult;
+        while (improvement && loop < n * n) {
+            improvement = false;
+            for (int i = 1; i < n - 1; i++) {
+                for (int j = i + 1; j < n; j++) {
+                    loop++;
+                    if (j == n - 1) {
+                        actualPathResult = getResult(results, path.get(i - 1), path.get(i));
+                        newPathResult = getResult(results, path.get(i - 1), path.get(j));
+                    } else {
+                        actualPathResult = getResult(results, path.get(i - 1), path.get(i)) + getResult(results, path.get(j), path.get(j + 1));
+                        newPathResult = getResult(results, path.get(i - 1), path.get(j)) + getResult(results, path.get(i), path.get(j + 1));
+                    }
+                    if (actualPathResult > newPathResult) {
+                        // path[i], path[j] = path[j], path[i]
+                        Collections.swap(path, i, j);
+                        improvement = true;
+                    }
                 }
             }
         }
-
-        return findAround(botX,  botY,  radius+1, H,  W,  board);
-    }
-    static void play(int botY, int botX, int H, int W, String[] board) {
-        //add logic here
-        int dirtX = 0;
-        int dirtY = 0;
-
-        int[] dirt= null;
-        int radius=0;
-        dirt = findAround(botX,  botY,  radius, H,  W,  board);
-
-        dirtX= dirt[0];
-        dirtY= dirt[1];
-
-
-
-        if ((dirtX == botX) && (dirtY == botY)) {
-            System.out.println("CLEAN");
-        } else if (dirtX < botX) {
-            System.out.println("LEFT");
-        } else if (dirtX > botX) {
-            System.out.println("RIGHT");
-        } else if (dirtY < botY) {
-            System.out.println("UP");
-        } else if (dirtY > botY) {
-            System.out.println("DOWN");
-        }
-
+        return path;
     }
 
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int[] bot = new int[2];
-        int[] size = new int[2];
-        for (int i = 0; i < 2; i++) {
-            bot[i] = in.nextInt();
+    // transfer point to the mat index
+    public int getResult(int[][] results, int index1, int index2) {
+        if (index1 < index2)
+            return results[index2 - 2][index1 - 1];
+        else
+            return results[index1 - 2][index2 - 1];
+    }
+
+    public int getTotalResult(int[][] results, ArrayList<Integer> path) {
+        int result = 0;
+        for (int i = 0; i < path.size() - 1; i++)
+            result += getResult(results, path.get(i), path.get(i + 1));
+        return result;
+    }
+
+    public int calculateBestResult(int botY, int botX, char[][] board, int H, int W) {
+
+        ArrayList<Coords> dirties = new ArrayList();
+        // add the bot current to dirties
+        dirties.add(new Coords(botY, botX));
+        // find the dirty
+        for (int i = 0; i < H; i++)
+            for (int j = 0; j < W; j++)
+                if (board[i][j] == 'd')
+                    dirties.add(new Coords(i, j));
+
+        int[][] results = new int[dirties.size() - 1][dirties.size()];
+        for (int i = 0; i < dirties.size() - 1; i++)
+            for (int j = 0; j < i + 1; j++)
+                results[i][j] = dirties.get(j).calculateDistance(dirties.get(i + 1));
+        ArrayList<ArrayList> solution = new ArrayList();
+        for (int i = 0; i < H * W * 4; i++) {
+            ArrayList<Integer> path = new ArrayList(dirties.size());
+            for (int j = 1; j < dirties.size(); j++)
+                path.add(j + 1);
+            Collections.shuffle(path);
+            path.add(0, 1);
+            solution.add(search(path, results));
         }
-        for (int i = 0; i < 2; i++) {
-            size[i] = in.nextInt();
+        // print("path:", path)
+        int bestResult = getTotalResult(results, solution.get(0));
+        int result;
+        for (int i = 1; i < H * W * 4; i++) {
+            result = getTotalResult(results, solution.get(i));
+            if (result < bestResult)
+                bestResult = result;
         }
-        String board[] = new String[size[0]];
-        for (int i = 0; i < size[0]; i++) {
-            board[i] = in.next();
+        return bestResult;
+    }
+
+    public String play(int botY, int botX, int H, int W, char[][] board) {
+
+        String move = null;
+        if (board[botY][botX] == 'd')
+            move = "CLEAN";
+        else {
+            int bestResult = Integer.MAX_VALUE, result;
+            if (botY - 1 >= 0) {
+                result = calculateBestResult(botY - 1, botX, board, H, W);
+                if (result < bestResult) {
+                    bestResult = result;
+                    move = "UP";
+                }
+            }
+            if (botY + 1 < W) {
+                result = calculateBestResult(botY + 1, botX, board, H, W);
+                if (result < bestResult) {
+                    bestResult = result;
+                    move = "DOWN";
+                }
+            }
+            if (botX - 1 >= 0) {
+                result = calculateBestResult(botY, botX - 1, board, H, W);
+                if (result < bestResult) {
+                    bestResult = result;
+                    move = "LEFT";
+                }
+            }
+            if (botX + 1 < W) {
+                result = calculateBestResult(botY, botX + 1, board, H, W);
+                if (result < bestResult) {
+                    bestResult = result;
+                    move = "RIGHT";
+                }
+            }
         }
-        play(bot[0], bot[1], size[0], size[1], board);
+        return move;
+    }
+
+    public class Coords {
+        int x, y;
+
+        public Coords(int xTarget, int yTarget) {
+            x = xTarget;
+            y = yTarget;
+        }
+
+        public int calculateDistance(Coords target) {
+            return Math.abs(target.x - x) + Math.abs(target.y - y) + 1;
+        }
     }
 }
