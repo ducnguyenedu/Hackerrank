@@ -8,7 +8,6 @@ interface AdvancedArithmetic {
 
 //Write your code here
 class MyCalculator implements AdvancedArithmetic {
-
     @Override
     public int divisor_sum(int n) {
         int s = 1;
@@ -19,7 +18,6 @@ class MyCalculator implements AdvancedArithmetic {
                 v += f;
             }
             s++;
-
         }
         return v;
     }
@@ -47,5 +45,3 @@ class Solution {
         }
     }
 }
-
-

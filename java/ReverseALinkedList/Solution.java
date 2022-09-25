@@ -5,15 +5,12 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Solution {
-
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void printSinglyLinkedList(SinglyLinkedListNode node, String sep, BufferedWriter bufferedWriter) throws IOException {
         while (node != null) {
             bufferedWriter.write(String.valueOf(node.data));
-
             node = node.next;
-
             if (node != null) {
                 bufferedWriter.write(sep);
             }
@@ -32,14 +29,12 @@ public class Solution {
     }
 
     //class Result {
-
     /*
      * Complete the 'reverse' function below.
      *
      * The function is expected to return an INTEGER_SINGLY_LINKED_LIST.
      * The function accepts INTEGER_SINGLY_LINKED_LIST llist as parameter.
      */
-
     /*
      * For your reference:
      *
@@ -49,13 +44,10 @@ public class Solution {
      * }
      *
      */
-
     public static void main(String[] args) throws IOException {
-
     }
 
     //}
-
     static class SinglyLinkedListNode {
         public int data;
         public SinglyLinkedListNode next;
@@ -77,15 +69,12 @@ public class Solution {
 
         public void insertNode(int nodeData) {
             SinglyLinkedListNode node = new SinglyLinkedListNode(nodeData);
-
             if (this.head == null) {
                 this.head = node;
             } else {
                 this.tail.next = node;
             }
-
             this.tail = node;
         }
     }
 }
-

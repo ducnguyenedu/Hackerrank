@@ -4,10 +4,8 @@ import java.util.Scanner;
 import java.util.Stack;
 
 class Solution {
-
     public static void main(String[] argh) {
         Scanner sc = new Scanner(System.in);
-
         while (sc.hasNext()) {
             String input = sc.next();
             //Complete the code
@@ -39,10 +37,5 @@ class Solution {
             }
             System.out.println(stack.isEmpty());
         }
-
     }
 }
-
-
-
-

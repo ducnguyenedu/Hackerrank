@@ -1,12 +1,9 @@
-
-
 #
 # Complete the 'dayOfProgrammer' function below.
 #
 # The function is expected to return a STRING.
 # The function accepts INTEGER year as parameter.
 #
-
 function dayOfProgrammer(year)
     # Write your code here
     total_days = 243
@@ -25,14 +22,8 @@ function dayOfProgrammer(year)
     date = programmer_day - total_days
     return string(date,".09.",year)
 end
-
-
 fptr = open(ENV["OUTPUT_PATH"], "w")
-
 year = parse(Int32, strip(readline(stdin)))
-
 result = dayOfProgrammer(year)
-
 write(fptr, result * "\n")
-
 close(fptr)

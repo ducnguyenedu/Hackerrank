@@ -15,7 +15,6 @@ class Solution {
             s[i] = sc.next();
         }
         sc.close();
-
         //Write your code here
         Arrays.sort(s, new Comparator<String>() {
             @Override

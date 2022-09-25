@@ -1,7 +1,6 @@
 package java_method_overriding;
 
 class Sports {
-
     String getName() {
         return "Generic Sports";
     }
@@ -25,7 +24,6 @@ class Soccer extends Sports {
 }
 
 public class Solution {
-
     public static void main(String[] args) {
         Sports c1 = new Sports();
         Soccer c2 = new Soccer();

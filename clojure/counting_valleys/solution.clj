@@ -14,26 +14,23 @@
    (reduce
     (fn [{:keys [level valleys] :as a} steps]
       (let [new-level (case steps
-                        \U (inc level)
-                        \D (dec level)
-                        level)]
+                            \U (inc level)
+                            \D (dec level)
+                            level)]
         (assoc
          a
          :level new-level
-         :valleys (if (and (zero? new-level) (= steps \U))
-                    (inc valleys)
-                    valleys))))
+         :valleys
+                (if (and (zero? new-level) (= steps \U))
+                  (inc valleys)
+                  valleys))))
     {:level   0
      :valleys 0})
-   :valleys)
-)
+   :valleys))
 
 (def fptr (get (System/getenv) "OUTPUT_PATH"))
-
 (def steps (Integer/parseInt (clojure.string/trim (read-line))))
-
 (def path (read-line))
-
 (def result (countingValleys steps path))
 
 (spit fptr (str result "\n") :append true)

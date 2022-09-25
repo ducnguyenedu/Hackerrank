@@ -26,7 +26,6 @@ public class Solution {
             while (temp <= i) {
                 box++;
                 temp = factor(((box) * (box + 1)) / 2);
-
             }
             arr[i] = ((box) * (box + 1)) / 2;
         }

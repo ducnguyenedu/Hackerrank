@@ -1,10 +1,7 @@
-
 def minion_game(string):
     # your code goes here
     s = string
-
     vowels = 'AEIOU'
-
     kevsc = 0
     stusc = 0
     for i in range(len(s)):
@@ -12,7 +9,6 @@ def minion_game(string):
         kevsc += (len(s)-i)
       else:
         stusc += (len(s)-i)
-
     if kevsc > stusc:
         print ("Kevin", kevsc)
     elif kevsc < stusc:

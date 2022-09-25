@@ -4,9 +4,7 @@ import java.util.Scanner;
 
 //Score 52.8
 public class Solution {
-
     static int[] findAround(int botX, int botY, int radius, int H, int W, String[] board) {
-
         if (radius == 1 && board[botY].charAt(botX) == 'd') {
             int[] res = new int[2];
             res[0] = botX;
@@ -17,12 +15,9 @@ public class Solution {
         int startY = Math.max(botY - radius, 0);
         int endX = Math.min(botX + radius, W);
         int endY = Math.min(botY + radius, H);
-
         for (int y = startY; y < endY; y++) {
             for (int x = startX; x < endX; x++) {
-
                 if (board[y].charAt(x) == 'd') {
-
                     int[] res = new int[2];
                     res[0] = x;
                     res[1] = y;
@@ -30,7 +25,6 @@ public class Solution {
                 }
             }
         }
-
         return findAround(botX, botY, radius + 1, H, W, board);
     }
 
@@ -38,15 +32,11 @@ public class Solution {
         //add logic here
         int dirtX = 0;
         int dirtY = 0;
-
         int[] dirt = null;
         int radius = 0;
         dirt = findAround(botX, botY, radius, H, W, board);
-
         dirtX = dirt[0];
         dirtY = dirt[1];
-
-
         if ((dirtX == botX) && (dirtY == botY)) {
             System.out.println("CLEAN");
         } else if (dirtX < botX) {
@@ -58,7 +48,6 @@ public class Solution {
         } else if (dirtY > botY) {
             System.out.println("DOWN");
         }
-
     }
 
     public static void main(String[] args) {
