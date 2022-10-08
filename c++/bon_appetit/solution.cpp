@@ -1,8 +1,13 @@
 #include <bits/stdc++.h>
+
 using namespace std;
+
 string ltrim(const string &);
+
 string rtrim(const string &);
+
 vector <string> split(const string &);
+
 /*
  * Complete the 'bonAppetit' function below.
  *
@@ -26,6 +31,7 @@ void bonAppetit(vector<int> bill, int k, int b) {
         cout << temp2 - temp1;
     }
 }
+
 int main() {
     string first_multiple_input_temp;
     getline(cin, first_multiple_input_temp);
@@ -46,6 +52,7 @@ int main() {
     bonAppetit(bill, k, b);
     return 0;
 }
+
 string ltrim(const string &str) {
     string s(str);
     s.erase(
@@ -54,6 +61,7 @@ string ltrim(const string &str) {
     );
     return s;
 }
+
 string rtrim(const string &str) {
     string s(str);
     s.erase(
@@ -62,6 +70,7 @@ string rtrim(const string &str) {
     );
     return s;
 }
+
 vector <string> split(const string &str) {
     vector <string> tokens;
     string::size_type start = 0;

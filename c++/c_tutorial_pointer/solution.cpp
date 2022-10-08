@@ -3,13 +3,15 @@
 #include <vector>
 #include <iostream>
 #include <algorithm>
+
 using namespace std;
-void update(int *a,int *b) {
+
+void update(int *a, int *b) {
     int temp = *a;
     temp = *a + *b;
     *b = *a - *b;
-    if (*b<0){
-        *b = *b*(-1);
+    if (*b < 0) {
+        *b = *b * (-1);
     }
     *a = temp;
 }

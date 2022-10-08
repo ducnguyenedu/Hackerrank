@@ -3,6 +3,7 @@
 #include <vector>
 #include <iostream>
 #include <algorithm>
+
 using namespace std;
 
 
@@ -11,15 +12,15 @@ int main() {
     int array_length;
     cin >> array_length;
     int arr[array_length];
-    for(int i=0;i<array_length;i++){
+    for (int i = 0; i < array_length; i++) {
         int input;
         cin >> input;
         arr[i] = input;
     }
 
-    for(int i=array_length;i>0;i--){
+    for (int i = array_length; i > 0; i--) {
         int output;
-        output = arr[i-1];
+        output = arr[i - 1];
         cout << output << ' ';
     }
 
